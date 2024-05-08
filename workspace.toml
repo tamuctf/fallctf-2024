@@ -1,0 +1,55 @@
+[workspace]
+ctf-name = "fallctf-2024"
+
+[network]
+base-chal-port = 55000
+
+[nginx]
+domain = "ctf.cybr.club"
+become = "root"
+
+[ctfd]
+url = "ctf.cybr.club"
+scoring-type = "dynamic"
+# this is only for dynamic
+points = 500
+decay-limit = 30
+minimum = 100
+
+[virtual-machines]
+
+[virtual-machines.settings]
+vnetif = "vboxnet0"
+ipv4_range = "192.168.200.0/24"
+install-path = "/home/vagrantboxes/"
+become = "vagrantboxes"
+
+# memory and disk in MB
+[virtual-machines.container-registry]
+name = "fallctf-2023-registry"
+cores = 2
+memory = 2048
+disk-size = 10240
+type = "docker"
+ip = "192.168.200.2"
+
+[virtual-machines.frontend]
+name = "fallctf-2023-ctfd"
+cores = 4
+memory = 4098
+disk-size = 10240
+type = "ctfd"
+ip = "192.168.200.3"
+# ports accept two syntaxes:
+#   "port" which is an implicit "port:port"
+#   "host_port:service_port"
+ports = ["8000"]
+image = "ctfd/ctfd:latest"
+
+[virtual-machines.challenge.0]
+name = "fallctf-2023-chals-0"
+cores = 10
+memory = 8192
+disk-size = 20480
+type = "challenges"
+ip = "192.168.200.4"
