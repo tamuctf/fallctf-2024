@@ -3,6 +3,9 @@ ctf-name = "fallctf-2024"
 
 [network]
 base-chal-port = 55000
+ctfd-proxy-port = 60443
+site-proxy-port = 61443
+stream-proxy-port = 62443
 
 [nginx]
 domain = "ctf.cybr.club"
