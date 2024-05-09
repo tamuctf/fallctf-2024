@@ -1,10 +1,10 @@
 # Permuted
 
-This is where you will put your description. Anything between the first and second header sections will be included in the challenge description.
+Hey, what are some other synonyms for scrambled?
 
 ## Dev Notes
 
-This section will is where you will write any dev notes if you need. This section should include any details about how to start and stop the challenge as well as what files are provided to the competitors and any other information need for the review process
+Run `make extract` to get the binary.
 
 ## Solution
 
