@@ -10,6 +10,7 @@ stream-proxy-port = 62443
 [nginx]
 domain = "ctf.cybr.club"
 become = "root"
+cert_path = ""
 
 [ctfd]
 url = "ctf.cybr.club"
@@ -48,6 +49,7 @@ ip = "192.168.200.3"
 #   "host_port:service_port"
 ports = ["8000"]
 image = "ctfd/ctfd:latest"
+static-dir-key = ""
 
 [virtual-machines.challenge.0]
 name = "fallctf-2023-chals-0"
