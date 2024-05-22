@@ -9,7 +9,7 @@ $(NAME): $(NAME).c
 	$(CC) $^ -o $@ $(CFLAGS)
 
 clean: .PHONY
-	rm -f $(NAME) $(NAME).zip
+	rm -f $(NAME) $(NAME).tar.gz
 
 build: Dockerfile
 	docker $(DOCKER_GLOBAL) build -t $(NAME) .
@@ -20,6 +20,6 @@ extract: build
 	docker rm -v $(id)
 
 dist: extract
-	zip $(NAME).zip $(NAME)
+	tar -czf $(NAME).tar.gz $(NAME)
 
 .PHONY:
