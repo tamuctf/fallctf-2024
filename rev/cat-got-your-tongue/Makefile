@@ -3,9 +3,9 @@ NAME := cat-got-your-tongue
 all: dist
 
 clean: .PHONY
-	rm -f $(NAME).zip
+	rm -f $(NAME).tar.gz
 
 dist:
-	zip $(NAME).zip Project.sb3
+	tar -czf $(NAME).tar.gz Project.sb3
 
 .PHONY:
