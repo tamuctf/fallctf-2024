@@ -3,9 +3,9 @@ NAME := etam-woes
 all: dist
 
 clean: .PHONY
-	rm -f $(NAME).zip
+	rm -f $(NAME).tar.gz
 
 dist:
-	zip $(NAME).zip encrypter.py
+	tar -czf $(NAME).tar.gz encrypter.py
 
 .PHONY:
