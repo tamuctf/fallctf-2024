@@ -13,7 +13,7 @@ Your encrypted message is: 4775582d597954741376664713745c74587a6e54233d576c3d7c5
 
 ## Solution
 
-This section will contain the reviewers solution. The flag section below should stay the same. Just replace `gigem{testing_flag}` with the challenge flag.
+In the encrypter.py python file there is a commented portion of code for the decrypt function. By removing the comment and using the function by chaning encrypt(line) to decrypt(line) the decrypt function could now be used. Then by putting in the encrypted message string to the python program the flag is shown.
 
 flag:
-`gigem{testing_flag}`
+`gigem{G00d_Job_y0u_c4n_r3ad_PYth0n}`
