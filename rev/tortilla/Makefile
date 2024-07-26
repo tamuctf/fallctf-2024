@@ -6,6 +6,6 @@ clean: .PHONY
 	rm -f $(NAME).tar.gz
 
 dist:
-	tar -czf $(NAME).tar.gz $(NAME)
+	tar -czf $(NAME).tar.gz src/dist/game.exe
 
 .PHONY:
