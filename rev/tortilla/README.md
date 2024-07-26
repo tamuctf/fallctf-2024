@@ -1,18 +1,10 @@
 # TortillaBlockchainBitcoinMinerThreeThousand
 
-I found this funny cool game online, but for some reason it seems really laggy. 
-
-## Hints
-
-- Each hint should be prefaced with a "-"
-- Hints are not required
-- If you do not want to have hints that is fine
-- We normally do not provide hints for challenges at all
-- This example has 5 hints
+I found this funny cool game online, but for some reason after I play for a bit it starts lagging! Can you debug it for me please?
 
 ## Dev Notes
 
-This section will is where you will write any dev notes if you need. This section should include any details about how to start and stop the challenge as well as what files are provided to the competitors and any other information need for the review process
+Windows exe, please let me know if anything like audio or playing experience needs to be adjusted.
 
 ## Solution
 
