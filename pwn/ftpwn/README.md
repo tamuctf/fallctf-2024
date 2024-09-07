@@ -1,6 +1,6 @@
-# Challenge Name
+# ftpwn
 
-This is where you will put your description. Anything between the first and second header sections will be included in the challenge description.
+I made an implementation of ftp! Even though I didn't finish making it, I decided to host it anyways. What could POSSIBLY go wrong?
 
 ## Hints
 
