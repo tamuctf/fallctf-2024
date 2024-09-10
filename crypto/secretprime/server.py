@@ -3,7 +3,7 @@ from Crypto.Util.number import getPrime, getRandomRange, bytes_to_long, long_to_
 FLAG = bytes_to_long(open("flag.txt", "rb").read())
 
 def gen_key():
-    p = getPrime(256)
+    p = getPrime(512)
     k = getRandomRange(1, p)
     return p, k
 
