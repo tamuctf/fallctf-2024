@@ -3,9 +3,9 @@ NAME := elbereth
 all: dist
 
 clean: .PHONY
-	rm -f $(NAME).zip
+	rm -f $(NAME).tar.gz
 
 dist:
-	zip $(NAME).zip bonD0.5.gz
+	tar -czf $(NAME).tar.gz bonD0.5.gz
 
 .PHONY:
