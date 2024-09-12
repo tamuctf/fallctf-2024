@@ -46,7 +46,7 @@ $(NAME): $(NAME).c
 	$(CC) $(CFLAGS) $^ -o $@
 
 clean: .PHONY
-	rm -f $(NAME) $(NAME).zip
+	rm -f $(NAME) $(NAME).tar.gz
 	docker container rm -f $(NAME)$(SUFFIX)
 
 build: Dockerfile $(NAME)
@@ -65,6 +65,6 @@ extract:
 	docker rm -v $(id)
 
 dist: extract
-	zip $(NAME).zip $(NAME) $(NAME).c solver-template.py
+	tar -czf $(NAME).tar.gz $(NAME) $(NAME).c solver-template.py
 
 .PHONY:
