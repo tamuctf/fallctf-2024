@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap');
+
+    body {
+      font-family: "EB Garamond", serif;
+      font-size: 22px;
+      background-color: white;
+      color: black;
+      line-height: 1.4;
+      width: min(720px, calc(100vw - 20px));
+      margin: 20px auto;
+    }
+
+    .article {
+      width: min(720px, calc(100vw - 20px));
+      margin: 20px auto;
+      margin-top: 20px;
+      margin-right: auto;
+      margin-bottom: 20px;
+      margin-left: auto;
+    }
+
+    h1 {
+      font-size: 300%;
+      margin-top: 2em;
+      margin-bottom: 1.5em;
+      line-height: 1.2;
+    }
+  </style>
+</head>
+<body>
+  <div class="article">
+    <h1>Lorem Ipsum</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel eleifend ipsum, id bibendum lectus. Mauris finibus a lacus vel tristique. Morbi scelerisque, orci quis pellentesque congue, enim arcu luctus mi, at ultrices nunc enim vel ligula. Morbi quis dui orci. Donec ornare odio et ligula aliquam tempor. Suspendisse nec nisl orci. Cras id urna viverra nulla tempus bibendum.
+    </p>
+    <p>
+      Mauris pretium tortor eu condimentum maximus. Suspendisse consectetur pellentesque mauris, sed varius lorem ullamcorper vitae. Phasellus convallis facilisis massa ac ultricies. Nam posuere pellentesque justo, eu auctor est suscipit vitae. Nunc lacinia ligula quis elit cursus, quis euismod turpis dictum. Praesent tincidunt lobortis condimentum. Nam gravida velit tellus, ut posuere tortor egestas a.
+    </p>
+    <p>
+      Aenean erat metus, fermentum quis nulla non, pellentesque faucibus metus. Sed eu semper orci. Quisque a pellentesque nunc, in suscipit mi. In tempus lacinia laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse scelerisque arcu in augue euismod porttitor. Etiam non tellus sed augue consectetur sagittis. Sed efficitur eros non sem varius, in dignissim risus aliquet. Praesent sit amet lobortis tellus. Sed enim purus, blandit at dui sed, maximus condimentum felis. Quisque eleifend, nibh luctus cursus volutpat, nunc urna ultrices augue, vitae rutrum elit libero eu neque. Ut laoreet urna turpis, quis ultricies lacus ultricies vitae. Donec ante sem, ultrices ornare tincidunt vel, luctus quis justo. Integer ac tellus pellentesque, lobortis tellus nec, laoreet enim.
+    </p>
+    <p>
+      Nullam varius odio euismod arcu fermentum tempor. Sed placerat vestibulum nulla, ac porta risus euismod ac. Donec pretium, ante ut pharetra cursus, justo augue tristique mauris, vitae pharetra tellus ipsum ac odio. Etiam sem est, sagittis ac vulputate id, egestas sed mauris. Integer sit amet condimentum velit. Suspendisse porttitor turpis eu nisl scelerisque, non laoreet nisi fringilla. Aliquam erat volutpat. Nam porta mi mattis accumsan euismod. Proin euismod, nulla ut hendrerit auctor, augue massa suscipit dui, ut scelerisque leo urna eu ligula. Pellentesque est ligula, varius non mi sit amet, lobortis viverra eros. Nunc mattis odio sed nulla mollis, ac dapibus ante vehicula. Donec congue quam sapien, a commodo nulla posuere quis. Vivamus posuere quam nunc, at euismod felis varius eget. Donec rhoncus enim augue, a posuere quam interdum ac.
+    </p>
+    <p>
+      Sed sit amet libero est. Nam iaculis, eros eu faucibus molestie, leo metus elementum massa, ut faucibus enim augue non lectus. Sed molestie augue ac enim auctor, eget mattis purus venenatis. Morbi luctus eu neque a molestie. Sed suscipit sit amet sapien sit amet tempus. Etiam libero arcu, pretium quis placerat dapibus, aliquam eu elit. In hac habitasse platea dictumst. Duis tempor augue et leo luctus, nec suscipit velit interdum. Fusce vestibulum mauris neque, vel lacinia tortor mattis id. Nam sit amet orci ut ipsum placerat ullamcorper. Quisque interdum egestas facilisis. Duis nisi mauris, blandit nec ex ac, suscipit hendrerit nisl.
+    </p>
+    <div class="form">
+      <form id="comment" onsubmit="return false">
+        <h3>Comments:</h3>
+        <div class="field">
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" placeholder="Enter your name" maxlength="24" />
+          </small>
+        </div>
+        <div class="field">
+          <label for="comment">Comment:</label><br>
+          <textarea type="text" id="comment" name="comment" maxlength="256" placeholder="Comment" rows="8" cols="50" ></textarea>
+          </small>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <div class="output" id="output">
+      </div>
+    </div>
+  </div>
+  <script>
+    const form = document.getElementById('comment');
+
+    form.addEventListener('submit', (event) => {
+      document.getElementById('output').innerHTML = "Please wait while we submit your comment..."
+      submit().then((response) => {
+        document.getElementById('output').innerHTML = response.message
+      });
+    });
+
+    async function submit() {
+      const response = await fetch('/api/submit', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: form.elements[0].value,
+          comment: form.elements[1].value
+        })
+      });
+      
+      return await response.json()
+    }
+  </script>
+</body>
