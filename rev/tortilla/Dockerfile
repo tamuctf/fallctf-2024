@@ -7,5 +7,4 @@ COPY requirements.txt .
 
 RUN wine pip install -r requirements.txt
 
-# pyinstaller --add-data "data\*;data\" --noconsole -F .\game.py   
-RUN wine pyinstaller --add-data "data\*;data\" --noconsole -F .\game.py
+RUN wine pyinstaller --add-data "data\*;data\\" --noconsole -F game.py

@@ -3,7 +3,7 @@ NAME := tortilla
 all: $(NAME)
 
 $(NAME): 
-	echo hi
+	pyinstaller --add-data "data\*;data\" --noconsole -F .\game.py   
 
 clean: .PHONY
 	rm -f $(NAME) $(NAME).tar.gz
@@ -13,10 +13,11 @@ build: Dockerfile
 
 extract: build
 	$(eval id := $(shell docker create $(NAME)))
-	docker cp $(id):/tmp/$(NAME) .
+	docker cp $(id):/app/dist/game.exe $(NAME).exe
 	docker rm -v $(id)
 
 dist: extract
-	tar -czf $(NAME).tar.gz $(NAME)
+	tar -czf $(NAME).tar.gz $(NAME).exe
+	rm -f $(NAME).exe
 
 .PHONY:
