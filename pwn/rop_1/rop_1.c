@@ -12,6 +12,7 @@ int upkeep() {
 
 void setAdmin() {
 	admin = 1;
+	puts("You are now an admin!");
 }
 
 void win() {
