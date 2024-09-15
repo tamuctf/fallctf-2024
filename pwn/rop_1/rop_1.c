@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-int admin = 0;
-
 int upkeep() {
         // IGNORE THIS
         setvbuf(stdin, NULL, _IONBF, 0);
@@ -10,7 +8,10 @@ int upkeep() {
         setvbuf(stderr, NULL, _IONBF, 0);
 }
 
-void setAdmin() {
+
+int admin = 0;
+
+void set_admin() {
 	admin = 1;
 	puts("You are now an admin!");
 }
