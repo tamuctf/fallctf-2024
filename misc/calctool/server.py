@@ -10,10 +10,10 @@ def calc():
     try:
         result = sympify(expr)
         if isinstance(result, int) or isinstance(result, float) or result.is_number: # a calculator should only return numeric results!
-            return jsonify({'result': str(result)})
+            return jsonify({'result': result})
     except:
-        pass
-    return jsonify({'error': 'Invalid expression'}), 400
+        return jsonify({'error': 'Invalid expression'}), 400
+    
 
 
 @app.get('/')
