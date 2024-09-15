@@ -15,26 +15,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $ldap_dn = "dc=dap-me-up,dc=local";
         $ldap_admin_dn = "cn=admin,dc=dap-me-up,dc=local";
         $ldap_admin_password = "roMZCDMcFfKVhM5nUKyh8VrTf5anpDUt";
-
-        $ldap_conn = ldap_connect($ldap_host) or die();
+        
+        $ldap_conn = ldap_connect($ldap_host);
         ldap_set_option($ldap_conn, LDAP_OPT_PROTOCOL_VERSION, 3);
-
+    
         if ($ldap_conn) {
             $ldapbind_admin = ldap_bind($ldap_conn, $ldap_admin_dn, $ldap_admin_password);
             
             if ($ldapbind_admin) {
                 $filter = "(&(uid=$username)(userPassword=$password))";
-                $result = ldap_search($ldap_conn, $ldap_dn, $filter) or die();
-                $entries = ldap_get_entries($ldap_conn, $result);
-
-                if ($entries["count"] > 0) {
-                    $login_message = "Login success!";
-                    $login_success = true;   
+                $result = ldap_search($ldap_conn, $ldap_dn, $filter);
+    
+                if (!$result)
+                    $error_message = "Something went wrong!";
+                else {
+                    $entries = ldap_get_entries($ldap_conn, $result);
+    
+                    if ($entries["count"] > 0) {
+                        $login_message = "Login success!";
+                        $login_success = true;   
+                    }
+                    else
+                        $error_message = "Invalid username or password!";
                 }
-                else
-                    $error_message = "Invalid username or password!";
             }
-
+    
             ldap_close($ldap_conn);
         }
     }
