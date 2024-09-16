@@ -13,8 +13,8 @@ What is the message?
 - Flag format: gigem{message}
 
 ## Solution
-
-
+Used dCode polybius-cipher and used the automatic decryption.
+Got GIGEMCONGRATSTHISISTHEGREEKTELEGRAPHYFLAG
 
 flag:
-`gigem{}`
+`gigem{GIGEMCONGRATSTHISISTHEGREEKTELEGRAPHYFLAG}`
