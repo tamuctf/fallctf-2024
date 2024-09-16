@@ -9,6 +9,7 @@ What is the message?
 ## Hints
 
 - https://en.wikipedia.org/wiki/Polybius#Cryptography
+- First five charaters after decryption should be `GIGEM` then the message
 - Flag format: gigem{message}
 
 ## Solution
