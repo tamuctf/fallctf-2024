@@ -1,6 +1,6 @@
 # Cinephile
 
-The Security Operations Center (SOC) got a packet capture (pcapng) of someone at work not activly working. It looks like their might be a movie being watched on an unsecure connection. What are the creatures approaching from the southeast?
+The Security Operations Center (SOC) got a packet capture (pcapng) of someone at work not actively working. It looks like their might be a movie being watched on an unsecure connection. What are the creatures approaching from the southeast?
 
 ## Hints
 
