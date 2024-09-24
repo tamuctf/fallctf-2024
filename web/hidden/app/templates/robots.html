@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="{{ url_for('static', filename='styles/style.css') }}" >
+    <title>Robot Wanted Posters</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+    <h1>Robot Takeover: Wanted Posters</h1>
+    <div class="robot-container">
+        {% for robot in robots %}
+            <div class="robot">
+                <div class="wanted">WANTED</div>
+                <img src="{{ robot.image }}" alt="{{ robot.name }}">
+                <p>{{ robot.name }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="hint">
+        <h2>Maybe look around the page a bit more, there might be something hidden here!</h3>
+    </div>
+    <!--  Congrats!! you found the first part of the flag!  -->
+    <!--  gigem{lm40_h1  -->
+    <!--  Have you checked what else our robots might be up to? They're pretty good at hiding things!  -->
+</body>
+</html>

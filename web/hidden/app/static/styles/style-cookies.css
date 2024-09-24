@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0e6d2;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h1 {
+    color: #0066cc;
+    text-align: center;
+}
+.cookie-jar {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #8b4513;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hint {
+    font-style: italic;
+    text-align: center;
+    color: #666;
+}
