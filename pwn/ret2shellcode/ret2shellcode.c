@@ -15,7 +15,7 @@ int main() {
 	printf("This is a valuable piece of information: 0x%lx\n", &message);
 	puts("Enter your message:\n");
 
-	fgets(message, 97, stdin);
+	fgets(message, 100, stdin);
 
         printf("Here is your message: %s\n", message);
 }

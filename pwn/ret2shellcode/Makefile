@@ -39,7 +39,7 @@ DOCKER_RUNTIME := --memory=128m --cpus=0.2 --read-only --restart=always
 
 # build vars
 CC := $(or $(CC),gcc)
-CFLAGS := -fstack-protector -Wl,-z,relro,-z,now,-z,execstack
+CFLAGS := -fno-stack-protector -Wl,-z,relro,-z,now,-z,execstack
 all: $(NAME)
 
 $(NAME): $(NAME).c
