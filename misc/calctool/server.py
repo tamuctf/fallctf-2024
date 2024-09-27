@@ -10,7 +10,7 @@ def calc():
     try:
         result = sympify(expr)
         if isinstance(result, int) or isinstance(result, float) or result.is_number: # a calculator should only return numeric results!
-            return jsonify({'result': result})
+            return jsonify({'result': str(result)})
     except:
         return jsonify({'error': 'Invalid expression'}), 400
     
@@ -22,4 +22,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(port=8080)
+    app.run(host='0.0.0.0', port=8080)

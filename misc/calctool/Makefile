@@ -41,6 +41,9 @@ DOCKER_RUNTIME := --memory=128m --cpus=0.2 --read-only --restart=always
 clean: .PHONY
 	rm -f $(NAME).tar.gz
 
+build:
+	docker $(DOCKER_GLOBAL) build -t $(REGISTRY)$(NAME) .
+
 run:
 	$(eval ports := $(shell python -c "for h, c in zip('$(HPORTS)'.split(), '$(CPORTS)'.split()): print(f' -p {h}:{c}')"))
 	docker $(DOCKER_GLOBAL) run $(DOCKER_RUNTIME) -d --name $(NAME)$(SUFFIX) $(ports) $(REGISTRY)$(NAME)
