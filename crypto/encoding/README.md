@@ -8,11 +8,11 @@ Can you figure out what message I sent?
 
 ## Hints
 
-- This tool is helpful: <https://cyberchef.org>
+- This tool is helpful: https://gchq.github.io/CyberChef/
 
 ## Solution
 
-This section will contain the reviewers solution. The flag section below should stay the same. Just replace `gigem{testing_flag}` with the challenge flag.
+Put the encoded text into the CyberChef link provided in the hint. By the use of magic it gives Base64 decoding then Hex. After that by applying rot13 the flag is shown.
 
 flag:
-`gigem{testing_flag}`
+`gigem{rot13_hex_base64_encoding!!!}`
