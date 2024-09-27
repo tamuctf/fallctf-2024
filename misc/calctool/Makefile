@@ -39,6 +39,7 @@ DOCKER_RUNTIME := --memory=128m --cpus=0.2 --read-only --restart=always
 # ============================================================
 
 clean: .PHONY
+	docker container rm -f $(NAME)$(SUFFIX)
 	rm -f $(NAME).tar.gz
 
 build:
