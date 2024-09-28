@@ -12,7 +12,7 @@ File: https://drive.google.com/file/d/1qXoLfHoCzua_rZhtPM33Ny4s6kkciMqo/view?usp
 
 ## Solution
 
-
+If we open the packet capture file using Wireshark, we can see that there is a lot of network traffic, and that Telnet is one of the protocols being used. Since information sent over Telnet is unencrypted and visible, we can look at the information being sent by right-clicking on a Telnet packet and clicking `Follow->TCP Stream`. We then see that an ASCII version of Star Wars is being transmitted over Telnet. If we search for the string `southeast`, we see C-3PO mention people coming from the southeast, and R2-D2 can be seen mentioning the group coming from the southeast, which is `sand people`. 
 
 flag:
-`gigem{}`
+`gigem{sand_people}`
