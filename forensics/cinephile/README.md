@@ -8,6 +8,7 @@ File: https://drive.google.com/file/d/1qXoLfHoCzua_rZhtPM33Ny4s6kkciMqo/view?usp
 
 ## Hints
 
+- https://www.wireshark.org/
 - https://en.wikipedia.org/wiki/Telnet
 
 ## Solution
