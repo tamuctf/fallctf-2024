@@ -6,9 +6,7 @@ NzQgNzYgNzQgNzIgN2EgN2IgNjUgNjIgNjcgMzEgMzMgNWYgNzUgNzIgNmIgNWYgNmYgNmUgNjYgNzIg
 ```
 Can you figure out what message I sent?
 
-## Hints
-
-- This tool is helpful: https://gchq.github.io/CyberChef/
+Tip: This tool is helpful: https://gchq.github.io/CyberChef/
 
 ## Solution
 
