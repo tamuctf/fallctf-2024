@@ -22,7 +22,7 @@ void win(){
 int main(){
 	char buff[16];
 	void (*guess)();
-
+	
 	upkeep();
 
 	while(1){
@@ -44,9 +44,10 @@ int main(){
 		
 		puts("Try again? (y/N)");
 		
-		int c;
-		while ((c = getchar()) != '\n' && c != EOF);
+		int tmp, c;
+		while ((tmp = getchar()) != '\n' && tmp != EOF); // read the rest of the line
 		c = getchar();
+		while ((tmp = getchar()) != '\n' && tmp != EOF); // read the rest of the line
 		
 		if(c != 'y'){
 			break;
@@ -55,7 +56,6 @@ int main(){
 
 	puts("Now say goodbye:");
 	
-	gets();
 	gets(&buff);
 
 	return 0;
