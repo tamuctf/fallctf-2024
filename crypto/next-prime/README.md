@@ -6,7 +6,7 @@ The following prime number was given:
 
 What is the next prime number right after this one?
 
-Flag format: gigem{number}
+Flag format: gigem{<next prime>}
 
 Tip: https://en.wikipedia.org/wiki/Prime_number
 
