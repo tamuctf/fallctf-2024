@@ -30,7 +30,7 @@ DOCKER_GLOBAL := --context $(DOCKER_CONTEXT)
 DOCKER_RUNTIME := --memory=128m --cpus=0.2 --read-only --restart=always
 
 clean: .PHONY
-	rm -f $(NAME).zip
+	rm -f $(NAME).tar.gz
 	docker container rm -f $(NAME)$(SUFFIX)
 
 build: Dockerfile
@@ -46,6 +46,6 @@ run:
 extract:
 
 dist: extract
-	zip $(NAME).zip server.py solver-template.py
+	tar -czf $(NAME).tar.gz server.py solver-template.py
 
 .PHONY:
