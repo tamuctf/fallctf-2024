@@ -4,7 +4,7 @@ I've hidden my secret flag in this zip file. Can you find it?
 
 ## Solution
 
-First by runnig `tar -xvf flag.tar.gz` the files can be retreived. When asked to replace flag.txt the "y" option was chosen each time. After this there were 4 directories a, b, c, and d as well as flag.txt file. Then used `grep -R gigem` to recurisvly search for any mention of gigem from the current location. Four fake flags were shown and the real flag stored in the d directory. Output of the command:
+First by runnig `unzip flag.zip` the files can be retreived. When asked to replace flag.txt the "y" option was chosen each time. After this there were 4 directories a, b, c, and d as well as flag.txt file. Then used `grep -R gigem` to recurisvly search for any mention of gigem from the current location. Four fake flags were shown and the real flag stored in the d directory. Output of the command:
 
 ```
 c/flag.txt:gigem{fake_flag}
