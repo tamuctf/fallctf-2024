@@ -4,10 +4,9 @@ The Security Operations Center (SOC) got a packet capture (pcapng) of someone at
 
 File: https://drive.google.com/file/d/1qXoLfHoCzua_rZhtPM33Ny4s6kkciMqo/view?usp=sharing
 
-- Flag format: gigem{words_seperated_by_underscores}
+Flag format: gigem{words_seperated_by_underscores}
 
-## Hints
-
+Useful resources:
 - https://www.wireshark.org/
 - https://en.wikipedia.org/wiki/Telnet
 
