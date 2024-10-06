@@ -3,9 +3,9 @@ NAME := cinephile
 all: dist
 
 clean: .PHONY
-	rm -f $(NAME).zip
+	rm -f $(NAME).tar.gz
 
 dist:
-	zip $(NAME).zip capture.pcapng
+	tar -czf $(NAME).tar.gz capture.pcapng
 
 .PHONY:
