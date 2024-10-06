@@ -3,9 +3,9 @@ NAME := logs
 all: dist
 
 clean: .PHONY
-	rm -f $(NAME).zip
+	rm -f $(NAME).tar.gz
 
 dist:
-	zip $(NAME).zip log.csv
+	tar -czf $(NAME).tar.gz log.csv
 
 .PHONY:
