@@ -6,13 +6,15 @@ A sequence of numbers were found but we can't make sense of it:
 
 What is the message?
 
+Tip: https://en.wikipedia.org/wiki/Polybius#Cryptography
+
 ## Hints
 
-- https://en.wikipedia.org/wiki/Polybius#Cryptography
 - First five charaters after decryption should be `GIGEM` then the message
 - Flag format: gigem{message}
 
 ## Solution
+
 Used dCode polybius-cipher and used the automatic decryption.
 Got GIGEMCONGRATSTHISISTHEGREEKTELEGRAPHYFLAG
 
