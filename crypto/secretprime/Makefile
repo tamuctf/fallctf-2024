@@ -43,9 +43,7 @@ run:
 	$(eval ports := $(shell python -c "for h, c in zip('$(HPORTS)'.split(), '$(CPORTS)'.split()): print(f' -p {h}:{c}')"))
 	docker $(DOCKER_GLOBAL) run $(DOCKER_RUNTIME) -d --name $(NAME)$(SUFFIX) $(ports) $(REGISTRY)$(NAME)
 
-extract:
-
-dist: extract
+dist:
 	tar -czf $(NAME).tar.gz server.py solver-template.py
 
 .PHONY:
