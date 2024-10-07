@@ -8,7 +8,7 @@ You won't be able to get the flag this time. Therer's no way you can chain multi
 from pwn import *
 
 context.log_level = "debug"
-io = remote("tamuctf.com", 443, ssl=True, sni="rop_1")
+io = remote("ctf.cybr.club", 443, ssl=True, sni="rop-1")
 #io = process("rop_1") # For running locally
 
 
@@ -28,7 +28,7 @@ io = remote("tamuctf.com", 443, ssl=True, sni="rop_1")
 
 # Get addresses of the `set_admin` and `win` functions
 # https://docs.pwntools.com/en/stable/elf/elf.html
-elf = ELF("rop_1")
+elf = ELF("rop-1")
 set_admin = elf.symbols["set_admin"]
 win = elf.symbols["win"]
 
