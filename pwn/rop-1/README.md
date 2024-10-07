@@ -9,7 +9,7 @@ from pwn import *
 
 context.log_level = "debug"
 io = remote("ctf.cybr.club", 443, ssl=True, sni="rop-1")
-#io = process("rop_1") # For running locally
+#io = process("rop-1") # For running locally
 
 
 # Must set `admin` to 1 before calling `win` to get the flag
@@ -17,8 +17,8 @@ io = remote("ctf.cybr.club", 443, ssl=True, sni="rop-1")
 
 # Run `checksec` on the binary to see protections:
 # https://docs.pwntools.com/en/stable/commandline.html#pwn-checksec
-#   $ checksec rop_1
-#   [*] '/tmp/rop_1'
+#   $ checksec rop-1
+#   [*] '/tmp/rop-1'
 #       Arch:     amd64-64-little
 #       RELRO:    Full RELRO
 #       Stack:    No canary found
@@ -48,7 +48,7 @@ win = elf.symbols["win"]
 # and take the address from the stack (using register RSP) to get the offset:
 # https://visualgdb.com/gdbreference/commands/run
 # https://visualgdb.com/gdbreference/commands/x
-#   $ gdb ./rop_1
+#   $ gdb ./rop-1
 #   (gdb) r
 #   Enter a message:
 #   aaaabaaacaaadaaaeaaafaaagaaahaaaiaaajaaakaaalaaamaaanaaaoaaapaa
