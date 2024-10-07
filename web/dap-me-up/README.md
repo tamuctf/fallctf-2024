@@ -2,7 +2,7 @@
 
 Bob,
 
-Dap me up, but login first to prove it's really you.
+Dap me up, but login with your account first to prove it's really you.
 
 ## Dev Notes
 
