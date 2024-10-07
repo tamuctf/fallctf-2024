@@ -128,7 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if ($login_attempted)
                     echo $error_message;
                 else
-                    echo "Please login to dap me up.";
+                    echo "Please login with your LDAP credentials to continue.";
                 ?>
             </span>
         <?php
