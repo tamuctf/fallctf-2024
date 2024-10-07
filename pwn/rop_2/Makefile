@@ -1,5 +1,5 @@
 # deployment vars
-NAME := rop_2
+NAME := rop-2
 
 # ============================================================
 # NOTE: the following are only necessary if hosting containers
