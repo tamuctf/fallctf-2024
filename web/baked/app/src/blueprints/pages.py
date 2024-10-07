@@ -37,6 +37,9 @@ def submit():
         if request.json['comment'] != '':
             if len(request.json['comment']) > 256:
                 return jsonify({"message": "Comment too long"})
+
+            if '<' not in request.json['comment']:
+                return jsonify({"message": "Comment submitted to admin for review"})
     
             submission = Submission(message=request.json['comment'])
             db.session.add(submission)

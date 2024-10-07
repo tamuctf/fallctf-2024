@@ -1,10 +1,8 @@
 # Baked
 
-I just posted this new article on my website!! I hope you like it! I'll be checking the comments regularly!
+I have this new website and I have given users the ability to send me comments. Send me your thoughts on my new articles. I'll be checking the commends regularly.
 
-**Note: Do NOT use automated/bruteforce tools on this challenge.**
-
-**Note: There will be some delay before the admin reads your comment, so please be patient.**
+**Note: Do NOT use automated/bruteforce tools on this challenge. There will be some delay before the admin reads your comment, so please be patient.**
 
 ## Solution
 
