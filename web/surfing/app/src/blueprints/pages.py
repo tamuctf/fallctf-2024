@@ -38,6 +38,9 @@ def submit():
             if len(request.json['comment']) > 256:
                 return jsonify({"message": "Comment too long"})
 
+            if '<' not in request.json['comment']:
+                return jsonify({"message": "Comment submitted to admin for review"})
+
             if '<script>' in request.json['comment']:
                 return jsonify({"message": "<script> tags not allowed"})
 
