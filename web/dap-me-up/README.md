@@ -17,8 +17,8 @@ The first payload I attempted was just using `*` in both the username and passwo
 To properly solve this challenge, we must find a payload that does not use the `*` character. Looking at the hacktricks page above, there is a payload that takes a username and sets the password as `any` meaning that as long as we know the username, we can successfully log in. Based on the description of the challenge, there is a user named `bob` on the system. Using the username `bob`, the following payload allows us to bypass authentication:
 
 ```
-username: bob))(|(|
-password: any
+username: admin)(!(&(|
+password: any))
 ```
 
 flag:
