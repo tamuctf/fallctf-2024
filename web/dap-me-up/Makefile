@@ -11,7 +11,7 @@ SUFFIX :=
 
 # configurable vars:
 # HPORTS="8888 8889" make -e ...
-CPORTS := 1337
+CPORTS := 8000
 HPORTS := $(CPORTS)
 SERVICES := HTTP
 
@@ -19,9 +19,9 @@ SERVICES := HTTP
 # this is necessary for docker compose string substitution via env variables
 # also useful for containers requiring build args for setting ports on multiple services
 $(foreach var, \
-    $(shell \
-				python -c "for s, p in zip('$(SERVICES)'.split(), '$(CPORTS)'.split()): print(f'{s}_CPORT:={p}')" \
-    ), $(eval $(var)) \
+	$(shell \
+		python -c "for s, p in zip('$(SERVICES)'.split(), '$(CPORTS)'.split()): print(f'{s}_CPORT:={p}')" \
+	), $(eval $(var)) \
 )
 
 # docker
@@ -29,27 +29,12 @@ DOCKER_CONTEXT := default
 DOCKER_GLOBAL := --context $(DOCKER_CONTEXT)
 DOCKER_RUNTIME := --memory=128m --cpus=0.2 --restart=always
 
-
-# ============================================================
-# NOTE: if not compiling, the $(NAME) dep along with compilation
-# 	directive can be safely removed
-# ============================================================
-
-# build vars
-CC := $(or $(CC),gcc)
-CFLAGS := -O0 -fno-stack-protector
-
-all: $(NAME)
-
-$(NAME): $(NAME).c
-	$(CC) $(CFLAGS) $^ -o $@
-
 clean: .PHONY
-	rm -f $(NAME) $(NAME).zip
+	docker container rm -f dap-me-up
 
 build: Dockerfile
 	docker $(DOCKER_GLOBAL) build -t $(NAME) \
-			--build-arg port=$(HTTP_CPORT) .
+		--build-arg port=$(HTTP_CPORT) .
 
 run:
 	$(eval ports := $(shell python -c "for h, c in zip('$(HPORTS)'.split(), '$(CPORTS)'.split()): print(f' -p {h}:{c}')"))

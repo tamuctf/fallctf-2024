@@ -25,7 +25,7 @@ points = 500
 # port: internal docker port (see CPORTS in makefile)
 # type: nginx type (site or stream)
 [services.http]
-port = 1337
+port = 8000
 type = "site"
 
 [nginx]
