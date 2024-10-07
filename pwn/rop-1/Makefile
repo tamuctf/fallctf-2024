@@ -1,5 +1,5 @@
 # deployment vars
-NAME := rop_1
+NAME := rop-1
 
 # ============================================================
 # NOTE: the following are only necessary if hosting containers
@@ -20,7 +20,7 @@ SERVICES := PWN
 # also useful for containers requiring build args for setting ports on multiple services
 $(foreach var, \
     $(shell \
-	python -c "for s, p in zip('$(SERVICES)'.split(), '$(CPORTS)'.split()): print(f'{s}_CPORT:={p}')" \
+			python -c "for s, p in zip('$(SERVICES)'.split(), '$(CPORTS)'.split()): print(f'{s}_CPORT:={p}')" \
     ), $(eval $(var)) \
 )
 

@@ -2,8 +2,6 @@
 
 You won't be able to get the flag this time. Therer's no way you can chain multiple functions with a buffer overflow, right?
 
-## Hints
-
 ## Solution
 
 ```python
