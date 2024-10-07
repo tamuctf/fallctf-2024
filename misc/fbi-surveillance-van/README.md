@@ -14,9 +14,13 @@ Every time his screen flashed, the frequency would jump in sync, but I had no id
 
 - https://www.youtube.com/watch?v=vvOAIeVGRfw
 
+## Dev Notes
+
+Make flag case insensitive.
+
 ## Solution
 
-This section will contain the reviewers solution. The flag section below should stay the same. Just replace `gigem{testing_flag}` with the challenge flag.
+This challenge requires the use of a SDR video snooping tool called `tempest`. To solve the challenge, we must [download `tempest`](https://github.com/martinmarinov/TempestSDR) from Github. Based on the tip provided in the description, we need to load the provided `.wav` file into Tempest. When loading the file into tempest we must set a sample rate of `2400000` with the data type `int16`. Once the file is open we can set the resolution to `1920x1080@60Hz` and press start. On the screen, the flag will play.
 
 flag:
-`gigem{testing_flag}`
+`gigem{th3y_4r3_w4tch1ng}`
