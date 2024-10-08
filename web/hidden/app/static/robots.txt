@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /secrets.html
+
+flag part 2:
+dd3n_1n_p
