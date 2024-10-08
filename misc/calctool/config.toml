@@ -36,5 +36,5 @@ type = "site"
 # hash $proxy_protocol_addr := multi-service,
 #   ensure contestant connects to same
 #   instance through a proxy
-balance_method = "least_conn"
+balance_method = "hash $proxy_protocol_addr"
 instances = 5
