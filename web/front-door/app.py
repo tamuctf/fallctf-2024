@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
@@ -6,9 +6,9 @@ app = Flask(__name__)
 def index():
     host = request.headers.get("Host")
     if host == "server.internal":
-        return "Internal network position verified! gigem{h057_15_ju57_4_50c14l_c0n57ruc7}"
+        return render_template('flag.html')
     else:
-        return "ERROR: External Requests Denied. As a security measure, this site is only reachable by requests made from the internal network, where it can be reached through the server.internal domain."
+        return render_template('denied.html')
 
 
 app.run("0.0.0.0", 3000)
