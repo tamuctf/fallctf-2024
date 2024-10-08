@@ -1,6 +1,6 @@
 # TortillaBlockchainBitcoinMinerThreeThousand
 
-I found this funny cool game online, but for some reason after I play for a bit it starts lagging! Can you debug it for me please?
+I downloaded this funny-looking game that was created with Pygame and then packaged with PyInstaller. However, sometimes when I'm playing, it seems to lag! Can you figure out what's going on?
 
 ## Dev Notes
 
