@@ -13,7 +13,7 @@ SUFFIX :=
 # HPORTS="8888 8889" make -e ...
 CPORTS := 8000 
 HPORTS := $(CPORTS)
-SERVICES := SITE 
+SERVICES := HTTP
 
 # generate service -> port mappings: SERVICE_PORT := PORT
 # this is necessary for docker compose string substitution via env variables
@@ -41,7 +41,7 @@ clean: .PHONY
 
 build: Dockerfile 
 	docker $(DOCKER_GLOBAL) build -t $(NAME) \
-		--build-arg port=$(SITE_CPORT) .
+		--build-arg port=$(HTTP_CPORT) .
 
 run:
 	$(eval ports := $(shell python -c "for h, c in zip('$(HPORTS)'.split(), '$(CPORTS)'.split()): print(f' -p {h}:{c}')"))
