@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                background-color: #727272;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .calculator {
+                background-color: #f1f3f4;
+                border-radius: 8px;
+                padding: 20px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 10px;
+                max-width: 400px;
+            }
+
+            .calculator input {
+                grid-column: 1 / span 4;
+                padding: 10px;
+                font-size: 18px;
+                border: none;
+                border-radius: 4px;
+                margin-bottom: 10px;
+                text-align: right;
+                background-color: #fff; /* Add this line to give the input a white background */
+            }
+
+            .calculator button {
+                padding: 10px;
+                font-size: 18px;
+                border: none;
+                border-radius: 4px;
+                background-color: #e8eaed;
+                cursor: pointer;
+            }
+
+            .calculator button:hover {
+                background-color: #d2d4d6;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="calculator">
+            <input type="text" id="display" oninput="updateExpression()" />
+            <button onclick="deleteLastCharacter()" style="grid-column: span 2; background-color: #55adff">DEL</button> 
+            <button onclick="clearExpression()" style="grid-column: span 2; background-color: #55adff">C</button> 
+            <button onclick="appendNumber(1)">1</button>
+            <button onclick="appendNumber(2)">2</button>
+            <button onclick="appendNumber(3)">3</button>
+            <button onclick="appendOperation('+')">+</button>
+            <button onclick="appendNumber(4)">4</button>
+            <button onclick="appendNumber(5)">5</button>
+            <button onclick="appendNumber(6)">6</button>
+            <button onclick="appendOperation('-')">-</button>
+            <button onclick="appendNumber(7)">7</button>
+            <button onclick="appendNumber(8)">8</button>
+            <button onclick="appendNumber(9)">9</button>
+            <button onclick="appendOperation('*')">*</button>
+            <button onclick="appendNumber(0)">0</button>
+            <button onclick="evalExpression()" style="grid-column: span 2; background-color: #55adff">=</button>
+            <button onclick="appendOperation('/')">/</button>
+        </div>
+        <script>
+            let display = document.getElementById("display");
+            let expression = "";
+
+            function appendNumber(number) {
+                if (expression === "Error!") {
+                    expression = "";
+                }
+                expression += number;
+                display.value = expression;
+            }
+
+            function appendOperation(operator) {
+                if (expression === "Error!") {
+                    expression = "";
+                }
+                expression += operator;
+                display.value = expression;
+            }
+
+            function evalExpression() {
+                fetch("/calc", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ expr: expression }),
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        if (data.error) {
+                            alert(data.error);
+                            expression = "Error!";
+                            display.value = expression;
+                            return;
+                        }
+                        expression = data.result;
+                        display.value = expression;
+                    })
+                    .catch((error) => {
+                        console.error("Error:", error);
+                    });
+            }
+
+            function deleteLastCharacter() {
+                if (expression === "Error!") {
+                    expression = "";
+                }
+                expression = expression.slice(0, -1);
+                display.value = expression;
+            }
+
+            function clearExpression() {
+                expression = "";
+                display.value = expression;
+            }
+
+            function updateExpression() {
+                expression = display.value;
+            }
+        </script>
+    </body>
+    </body>
+</html>
