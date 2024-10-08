@@ -35,7 +35,10 @@ void set_admin(int a, int b, int c) {
 
 void win() {
 	if (admin == 1) {
-		asm(                                                                                                                                                                                                                 "andq $-16, %rsp"                                                                                                                                                                                            );
+		asm(
+      "andq $-16, %rsp"
+    );
+
 		char flag[64];
 		FILE* f = fopen("flag.txt", "r");
 		if (!f) {
