@@ -35,14 +35,7 @@ DOCKER_RUNTIME := --memory=128m --cpus=0.2 --read-only --restart=always
 # 	directive can be safely removed
 # ============================================================
 
-# build vars
-CC := $(or $(CC),gcc)
-CFLAGS := -O0 -fno-stack-protector
-
-all: $(NAME)
-
-$(NAME): $(NAME).c
-	$(CC) $(CFLAGS) $^ -o $@
+all: build run
 
 clean: .PHONY
 	docker container rm -f $(NAME)$(SUFFIX)

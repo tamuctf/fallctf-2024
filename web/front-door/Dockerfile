@@ -5,6 +5,8 @@ RUN apt-get update -y && \
 
 WORKDIR /
 
+COPY app.py /app.py
+
 RUN pip3 install flask
 
 USER 1000:1000
