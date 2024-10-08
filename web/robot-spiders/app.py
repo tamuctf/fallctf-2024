@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
@@ -6,9 +6,9 @@ app = Flask(__name__)
 def index():
     ua = request.headers.get("User-Agent")
     if ua == "OAI-SearchBot" or ua == "ChatGPT-User" or ua == "GPTBot":
-        return "Success Condition"
+        return render_template('flag.html')
     else:
-        return "News articles will only be served to OpenAI for training data [in article format]"
+        return render_template('denied.html')
 
 
 app.run("0.0.0.0", 3000)
