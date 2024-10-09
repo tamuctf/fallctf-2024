@@ -6,7 +6,14 @@ Note: If you believe you have the correct flag but it is not being accepted plea
 
 ## Solution
 
-This section will contain the reviewers solution. The flag section below should stay the same. Just replace `gigem{testing_flag}` with the challenge flag.
+Since it is Aggie Park and facing a camera you can simply search "aggie park camera" and see this link:
+https://aggiepark.tamu.edu/
+
+By going to the dates of Fall break for Texas A&M starting with Tuesday, October 8th people standing in a group could be seen around 5:30pm however from the back. When changing the camera view at 5:18pm and 5:33pm snapshots were taken of 5 charaters. When zooming to 100% this is what could be seen:
+
+![image](https://github.com/user-attachments/assets/d0f0a953-6b4f-4149-a100-1e4de6312550)
+
+The middle letter is a bit hard to make out but it could still be made out to be `6ags9` and then putting it into the gigem flag format to give the flag.
 
 flag:
 `gigem{6ags9}`
