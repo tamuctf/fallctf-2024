@@ -6,6 +6,7 @@ RUN apt-get update -y && \
 WORKDIR /
 
 COPY app.py /app.py
+COPY templates /templates
 
 RUN pip3 install flask
 
