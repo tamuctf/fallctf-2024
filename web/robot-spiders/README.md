@@ -1,18 +1,15 @@
-# Challenge Name
+# Robot Spiders
 
-This is where you will put your description. Anything between the first and second header sections will be included in the challenge description.
+I was trying to catch up on the news, but I can't read any of the articles on my usual site.
+The website said something about licensing and AI?
 
 ## Hints
 
-- Each hint should be prefaced with a "-"
-- Hints are not required
-- If you do not want to have hints that is fine
-- We normally do not provide hints for challenges at all
-- This example has 5 hints
+- This challenge does not require interacting with any AI systems, just a bit of research.
 
 ## Dev Notes
 
-This section will is where you will write any dev notes if you need. This section should include any details about how to start and stop the challenge as well as what files are provided to the competitors and any other information need for the review process
+Simple web challenge running on Flask, no special concerns.
 
 ## Solution
 
