@@ -3,13 +3,7 @@
 I was trying to catch up on the news, but I can't read any of the articles on my usual site.
 The website said something about licensing and AI?
 
-## Hints
-
-- This challenge does not require interacting with any AI systems, just a bit of research.
-
-## Dev Notes
-
-Simple web challenge running on Flask, no special concerns.
+Note: This challenge does not require interacting with any AI systems, just a bit of research.
 
 ## Solution
 

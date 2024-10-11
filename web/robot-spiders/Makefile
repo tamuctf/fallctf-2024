@@ -11,7 +11,7 @@ SUFFIX :=
 
 # configurable vars:
 # HPORTS="8888 8889" make -e ...
-CPORTS := 3000
+CPORTS := 8000
 HPORTS := $(CPORTS)
 SERVICES := WEB
 
@@ -41,10 +41,7 @@ clean: .PHONY
 	docker container rm -f $(NAME)$(SUFFIX)
 
 build: Dockerfile
-	docker $(DOCKER_GLOBAL) build -t $(NAME) \
-		--build-arg name=$(NAME) \
-		--build-arg dashboard_port=$(WEB_CPORT) \
-		.
+	docker $(DOCKER_GLOBAL) build -t $(NAME) .
 
 run:
 	$(eval ports := $(shell python -c "for h, c in zip('$(HPORTS)'.split(), '$(CPORTS)'.split()): print(f' -p {h}:{c}')"))

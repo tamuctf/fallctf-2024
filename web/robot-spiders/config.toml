@@ -16,7 +16,7 @@ containers = true
 # port: internal docker port (see CPORTS in makefile)
 # type: nginx type (site or stream)
 [services.web]
-port = 3000
+port = 8000
 type = "site"
 
 [nginx]
@@ -27,5 +27,5 @@ type = "site"
 # hash $proxy_protocol_addr := multi-service,
 #   ensure contestant connects to same
 #   instance through a proxy
-balance_method = "ip_hash"
+balance_method = "hash $proxy_protocol_addr"
 instances = 5
