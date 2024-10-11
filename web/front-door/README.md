@@ -9,7 +9,11 @@ This is a simple web challenge using Flask, competitors just need to be able to 
 
 ## Solution
 
-This section will contain the reviewers solution. The flag section below should stay the same. Just replace `gigem{testing_flag}` with the challenge flag.
+This site uses a virtual host to check for internal requests. Can add the `Host` header to bypass the check.
+
+```sh
+curl http://127.0.0.1:3000 -H 'Host: server.internal'
+```
 
 flag:
-`gigem{testing_flag}`
+`gigem{h057_15_ju57_4_50c14l_c0n57ruc7}`
