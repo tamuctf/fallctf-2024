@@ -13,7 +13,13 @@ Simple web challenge running on Flask, no special concerns.
 
 ## Solution
 
-This section will contain the reviewers solution. The flag section below should stay the same. Just replace `gigem{testing_flag}` with the challenge flag.
+The challenge checks the user-agent string to grant access.
+
+Can set it in firefox by:
+- Go to about:config
+- Set general.useragent.override to "GPTBot"
+
+Then access the page to get the flag
 
 flag:
-`gigem{testing_flag}`
+`gigem{n0b0dy_r34d5_7h3_fu11_4r71c13_4nyw4y}`
