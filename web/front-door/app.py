@@ -11,4 +11,4 @@ def index():
         return render_template('denied.html')
 
 
-app.run("0.0.0.0", 3000)
+app.run("0.0.0.0", 8000)
