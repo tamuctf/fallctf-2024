@@ -1,8 +1,8 @@
 # deployment vars
 NAME := rejected
-MAILGUN_API_KEY := 
-MAILGUN_DOMAIN := 
-SECRET_KEY := 
+MAILGUN_API_KEY := $(shell cat mailgun.key)
+MAILGUN_DOMAIN := mgctf.cybr.club
+SECRET_KEY := $(shell openssl rand -hex 16)
 # ============================================================
 # NOTE: the following are only necessary if hosting containers
 # This can be safely removed
@@ -29,7 +29,7 @@ $(foreach var, \
 # docker
 DOCKER_CONTEXT := default
 DOCKER_GLOBAL := --context $(DOCKER_CONTEXT)
-DOCKER_RUNTIME := --memory=256m --cpus=0.2 --read-only --restart=always
+DOCKER_RUNTIME := --memory=128m --cpus=0.2 --read-only --restart=always
 
 
 # ============================================================
@@ -39,6 +39,7 @@ DOCKER_RUNTIME := --memory=256m --cpus=0.2 --read-only --restart=always
 #	dist directives should be omitted if there is no distributable
 # ============================================================
 clean: .PHONY
+	rm -f $(NAME).tar.gz
 	docker container rm -f $(NAME)$(SUFFIX) 
 
 build: Dockerfile 
@@ -55,4 +56,8 @@ run:
 		--mount type=tmpfs,destination=/tmp,tmpfs-mode=1777,tmpfs-size=64m \
 		--mount type=tmpfs,destination=/tmp/user_files,tmpfs-mode=1777,tmpfs-size=64m \
 		$(ports) $(REGISTRY)$(NAME)
+
+dist:
+	tar -czf $(NAME).tar.gz app/
+
 .PHONY:

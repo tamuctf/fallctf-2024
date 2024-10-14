@@ -2,9 +2,7 @@
 
 Man I'm so tired of being rejected from all the job applications...
 
-## Hints
-
-Wrap the flag with gigem{}, there are no _'s for this flag. All characters are alphanumeric.
+Note: The flag is in `/app/flag.txt`. Wrap the flag with `gigem{}`. All characters are alphanumeric.
 
 ## Dev Notes
 
