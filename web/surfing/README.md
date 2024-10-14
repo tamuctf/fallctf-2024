@@ -17,4 +17,4 @@ Similar to baked, we must use Cross-Site Scripting in order to steal the flag. F
 Using this payload, we are able to exfiltrate the page in Base64 encoding. Once decoded, we get the flag. 
 
 flag:
-`tamuctf{5urf1ng_4_fl4g5}`
+`gigem{5urf1ng_4_fl4g5}`
