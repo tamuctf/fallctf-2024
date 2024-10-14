@@ -4,12 +4,12 @@ DOCKER_CONTEXT := default
 DOCKER_GLOBAL := --context $(DOCKER_CONTEXT)
 
 clean: .PHONY
-	rm -f $(NAME) $(NAME).tar.gz
+	rm -f $(NAME).tar.gz $(NAME).exe
 
 build: Dockerfile
 	docker $(DOCKER_GLOBAL) build -t $(NAME) .
 
-extract: build
+extract:
 	$(eval id := $(shell docker create $(NAME)))
 	docker cp $(id):/App/enfliptor/out/$(NAME).exe $(NAME).exe
 	docker rm -v $(id)
