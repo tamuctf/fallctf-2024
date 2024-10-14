@@ -8,5 +8,6 @@ filter = ['eval', 'exec', 'import', 'open', 'system', 'os', 'builtins']
 for f in filter:
     if f in code:
         print('No! Bad programmer!!!')
-        break
+        exit(1)
+
 print(eval(code))
