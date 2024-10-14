@@ -1,5 +1,8 @@
 NAME := permuted
 
+DOCKER_CONTEXT := default
+DOCKER_GLOBAL := --context $(DOCKER_CONTEXT)
+
 CC := $(or $(CC),gcc)
 CFLAGS := -no-pie 
 
