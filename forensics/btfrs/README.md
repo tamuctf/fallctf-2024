@@ -14,7 +14,7 @@ The first step is to set up a loop device for the image: `losetup /dev/loop1 fla
 
 The second step is to mount the loop device: `mount /dev/loop1 /tmp/lmao`
 
-Finally the flag can be read and decoded from base64: `cat /tmp/lmao/flag.txt | base64 -d`
+Finally the flag can be read from `file.png` in `/tmp/lmao`
 
 flag:
 `gigem{mounted_btfrs_image_klsa71}`
