@@ -2,8 +2,7 @@ FROM ubuntu:20.04
 
 ARG port \
     mailgun_api_key \
-    mailgun_domain \
-    secret_key
+    mailgun_domain
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -y && \
@@ -23,8 +22,7 @@ USER 1000:1000
 
 ENV PORT=$port \
     MAILGUN_API_KEY=$mailgun_api_key \
-    MAILGUN_DOMAIN=$mailgun_domain \
-    SECRET_KEY=$secret_key
+    MAILGUN_DOMAIN=$mailgun_domain
 
 ENTRYPOINT [ "python3" ]
 
