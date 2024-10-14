@@ -57,7 +57,7 @@ app.post('/test-code', (req, res) => {
 
             let lines = output.split('\n');
 
-            if (lines.length != 4)
+            if (lines.length !== 4)
                 return res.status(400).send({ error: 'Invalid code output'});
 
             let results = {}
@@ -66,7 +66,7 @@ app.post('/test-code', (req, res) => {
             lines.forEach((line, idx) => {
                 line += '\n';
                 let hash = crypto.createHash('sha256').update(line).digest('hex');
-                results[`Test ${idx + 1}`] = tests[idx] != hash ? 'Fail' : 'Success';
+                results[`Test ${idx + 1}`] = tests[idx] !== hash ? 'Fail' : 'Success';
             });
 
             if (!(JSON.stringify(results).includes('Fail')))
