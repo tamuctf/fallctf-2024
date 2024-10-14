@@ -16,4 +16,4 @@ The solution is as easy as using Volatility to list all running processes in the
 The output of the Volatility command returns three processes which contain segments of the flag in their name which can be combined for the full flag.
 
 flag:
-`gigem{y0ufountmeinthem3mory}`
+`gigem{y0ufoundmeinthem3mory}`
