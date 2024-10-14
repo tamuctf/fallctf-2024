@@ -8,11 +8,11 @@ Every time his screen flashed, the frequency would jump in sync, but I had no id
 
 **Download: https://drive.google.com/file/d/13Ef3sGugmUB9UzVStvowQ9BmvAkhtSL4/view?usp=sharing**
 
-**Note: Use a sample rate of 2.4 MSPS (int16) and format the flag in all lowercase.**
+Note: https://www.youtube.com/watch?v=vvOAIeVGRfw
 
 ## Hints
 
-- https://www.youtube.com/watch?v=vvOAIeVGRfw
+Use a sample rate of 2.4 MSPS (int16) and format the flag in all lowercase.
 
 ## Dev Notes
 
