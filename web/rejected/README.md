@@ -2,7 +2,7 @@
 
 Man I'm so tired of being rejected from all these job applications...
 
-Note: The flag is in `/app/flag.txt`. Wrap the flag with `gigem{}`. All characters are alphanumeric.
+Note: The flag is in `/app/flag.txt`. Wrap the flag with `gigem{}`. All characters are alphanumeric. Emails may take a while to send. Please be patient.
 
 ## Dev Notes
 
