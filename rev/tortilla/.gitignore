@@ -1,0 +1,6 @@
+build/
+.venv/
+game.spec
+miner.py
+
+.gitignore
