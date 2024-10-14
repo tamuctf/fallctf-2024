@@ -2,7 +2,6 @@
 NAME := rejected
 MAILGUN_API_KEY := $(shell cat mailgun.key)
 MAILGUN_DOMAIN := mgctf.cybr.club
-SECRET_KEY := $(shell openssl rand -hex 16)
 # ============================================================
 # NOTE: the following are only necessary if hosting containers
 # This can be safely removed
@@ -47,7 +46,7 @@ build: Dockerfile
 		--build-arg port=$(SITE_CPORT) \
 		--build-arg mailgun_api_key=$(MAILGUN_API_KEY) \
 		--build-arg mailgun_domain=$(MAILGUN_DOMAIN) \
-		--build-arg secret_key=$(SECRET_KEY) .
+		.
 
 run:
 	$(eval ports := $(shell python -c "for h, c in zip('$(HPORTS)'.split(), '$(CPORTS)'.split()): print(f' -p {h}:{c}')"))
