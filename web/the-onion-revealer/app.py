@@ -4,9 +4,6 @@ import json
 
 app = Flask(__name__)
 
-# Get external IP address
-server_ip = requests.get('https://checkip.amazonaws.com').text.strip()
-
 @app.route("/")
 def index():
     # Added by the HTTP reverse proxy to flag direct/non-TOR traffic
@@ -50,4 +47,4 @@ def send_webhook():
         return jsonify({'error': str(e)}), 500
 
 
-app.run("0.0.0.0", 3000)
+app.run("127.0.0.1", 3000)
