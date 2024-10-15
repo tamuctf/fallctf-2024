@@ -50,7 +50,7 @@ Both direct HTTP traffic and TOR traffic go through Nginx, so the direct-access-
 
 ## Solution
 
-This section will contain the reviewers solution. The flag section below should stay the same. Just replace `gigem{testing_flag}` with the challenge flag.
+When accessing the onion link, we are presented with a webhook testing site. Based on the challenge description and the flavor text on the website, we can infer that the intention is to find the server's IP. Because this server will make web requests to a server of our choosing, we can set up a listener via `webhook.site` and make a request to our server. Once that request is recieved, it will reveal the underlying IP of the server. Requesting this IP gives us the flag.
 
 flag:
-`gigem{testing_flag}`
+`gigem{n0w_70_6r4b_h15_l4p70p}`
