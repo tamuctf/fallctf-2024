@@ -1,5 +1,7 @@
 # calctool
 
+Author: Alex
+
 Whenever you start using bigger numbers, that's when you have to pull a calculator out.
 
 ## Dev Notes

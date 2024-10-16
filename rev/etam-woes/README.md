@@ -1,5 +1,7 @@
 # ETAM Woes
 
+Author: Alex
+
 I finished this encryption lab for ENGR 102, but I forgot what my original message was. Can you help me recover it?
 
 All I have is this output:

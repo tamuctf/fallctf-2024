@@ -1,5 +1,7 @@
 # A Walk in the Park
 
+Author: Bode, Noah, Stella, Victor, Damian, Nicholas
+
 The lads and I went for a walk in Aggie Park during Fall break to get away from studying. While we were out, we decided to show a flag to a public facing camera at Aggie Park. Have fun trying to find it!
 
 Note: The flag format is `gigem{message}`. If you believe you have the correct flag but it is not being accepted please let a developer know.

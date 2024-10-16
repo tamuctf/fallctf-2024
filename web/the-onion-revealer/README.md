@@ -1,5 +1,7 @@
 # The Onion Revealer
 
+Author: Damian
+
 I got scammed while buying some completely legal goods on a niche e-commerce website; the details aren't important.
 The admins refused to help me, so I'd like to unmask them and take down their whole operation in retribution.
 This little service they run seems like a good starting point.

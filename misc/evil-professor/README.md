@@ -1,5 +1,7 @@
 # Evil Professor
 
+Author: Noah
+
 My CSCE 437 professor just released our latest programming assignment, but it seems like he wants us to fail...
 
 ## Solution

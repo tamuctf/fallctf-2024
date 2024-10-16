@@ -1,5 +1,7 @@
 # Robot Spiders
 
+Author: Damian
+
 I was trying to catch up on the news, but I can't read any of the articles on my usual site.
 The website said something about licensing and AI?
 

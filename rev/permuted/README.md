@@ -1,5 +1,7 @@
 # Permuted
 
+Author: Alex
+
 Hey, what are some other synonyms for scrambled?
 
 ## Dev Notes

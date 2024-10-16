@@ -1,5 +1,7 @@
 # Hidden
 
+Author: Victor
+
 There's plenty of stuff that are hidden around webpages. Can you find them all?
 
 ## Solution

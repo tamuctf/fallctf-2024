@@ -19,8 +19,6 @@ def secrets():
     return resp
 
 
-
-
 @app.route('/robots.txt',  methods=["GET"])
 def robots_txt():
     return send_from_directory(app.static_folder, 'robots.txt')

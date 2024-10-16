@@ -1,5 +1,7 @@
 # enfliptor
 
+Author: Alex
+
 I've encrypted my flag so you'll never get it back again! Mwa-ha-ha-ha!
 
 ## Solution

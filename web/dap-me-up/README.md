@@ -1,5 +1,7 @@
 # Dap Me Up
 
+Author: Noah
+
 Bob,
 
 Dap me up, but login with your account first to prove it's really you.
