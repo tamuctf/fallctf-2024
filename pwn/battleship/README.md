@@ -1,8 +1,8 @@
 # Battleship
 
-All you have to do is guess where the program lives in memory.
+Author: Lyle
 
-## Hints
+All you have to do is guess where the program lives in memory.
 
 ## Solution
 
@@ -59,4 +59,4 @@ io.interactive(prompt="")
 ```
 
 flag:
-`gigem{you_sunk_my_battleship}`
+`gigem{y0u_sunk_my_b4ttl3sh1p}`

@@ -1,14 +1,16 @@
 # Next Prime
 
+Author: Noam
+
 The following prime number was given:
 
 `7948992548489485950921349586776478634516625616506621719276263753`
 
 What is the next prime number right after this one?
 
-Flag format: gigem{<next prime>}
+Note: https://en.wikipedia.org/wiki/Prime_number
 
-Tip: https://en.wikipedia.org/wiki/Prime_number
+Flag format: `gigem{<next prime>}`
 
 ## Solution
 

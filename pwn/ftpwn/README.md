@@ -1,8 +1,8 @@
 # ftpwn
 
-I made an implementation of ftp! Even though I didn't finish making it, I decided to host it anyways. What could POSSIBLY go wrong?
+Author: Mukund
 
-## Hints
+I made an implementation of ftp! Even though I didn't finish making it, I decided to host it anyways. What could POSSIBLY go wrong?
 
 ## Solution
 

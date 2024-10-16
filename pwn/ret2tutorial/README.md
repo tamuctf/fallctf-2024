@@ -1,8 +1,8 @@
 # Ret2Tutorial
 
-Baby's first pwn challenge!
+Author: Victor
 
-## Hints
+Baby's first pwn challenge!
 
 ## Solution
 

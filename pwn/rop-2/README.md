@@ -1,5 +1,7 @@
 # ROP 2
 
+Author: Mukund
+
 I added function arguments to make it harder to get the flag! Fortunately, ROP gadgets can be used to control function arguments.
 
 ## Solution

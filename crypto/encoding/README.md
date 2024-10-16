@@ -1,12 +1,14 @@
 # Encoding
 
+Author: Mukund
+
 I decided to send a message to my friend, and encoded my message to make it harder to understand! Here it is:
 ```
 NzQgNzYgNzQgNzIgN2EgN2IgNjUgNjIgNjcgMzEgMzMgNWYgNzUgNzIgNmIgNWYgNmYgNmUgNjYgNzIgMzYgMzQgNWYgNzIgNjEgNzAgNjIgNzEgNzYgNjEgNzQgMjEgMjEgMjEgN2Q=
 ```
 Can you figure out what message I sent?
 
-Tip: This tool is helpful: https://gchq.github.io/CyberChef/
+Note: This tool is helpful: https://gchq.github.io/CyberChef/
 
 ## Solution
 

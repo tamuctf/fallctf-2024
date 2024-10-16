@@ -1,12 +1,12 @@
 # BTFRS
 
+Author: Noam
+
 There is a BTFRS filesystem that has the flag on it. How can you access the file?
 
-Link:
-https://drive.google.com/file/d/1igLGc1efsKWsJD2-gpM_YBn6mI97iHZo/view?usp=sharing
+Link: https://drive.google.com/file/d/1igLGc1efsKWsJD2-gpM_YBn6mI97iHZo/view?usp=sharing
 
-Tips:
-- https://en.wikipedia.org/wiki/Btrfs
+Note: https://en.wikipedia.org/wiki/Btrfs
 
 ## Solution
 

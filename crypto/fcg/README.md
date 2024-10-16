@@ -1,8 +1,10 @@
 # FCG
 
+Author: Alex
+
 Linear Congruential Generators are too weak so mine flips back and forth. Surely that's secure, right?
 
-Note: Flag format is `gigem{}`
+Flag format: `gigem{}`
 
 ## Solution
 

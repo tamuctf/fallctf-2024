@@ -1,5 +1,7 @@
 # Zipline
 
+Author: Alex
+
 I've hidden my secret flag in this zip file. Can you find it?
 
 ## Solution

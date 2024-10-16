@@ -1,5 +1,7 @@
 # SecretPrime
 
+Author: Alex
+
 There's no way you can decrypt anything without the secret prime!
 
 ## Dev Notes

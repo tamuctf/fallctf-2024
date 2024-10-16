@@ -1,11 +1,12 @@
 # Sus Processes
 
-Memory Dump Link:
-https://drive.google.com/file/d/19Ea-SZ-senEAwZMZQInU5zCfFWbO9LR2/view?usp=share_link
+Author: Michael
 
 Find the running processes that are a bit odd.
 
-Note: Volatility3 is a useful tool.
+Memory dump link: https://drive.google.com/file/d/19Ea-SZ-senEAwZMZQInU5zCfFWbO9LR2/view?usp=share_link
+
+Note: Volatility3 is a useful tool
 
 ## Solution
 
