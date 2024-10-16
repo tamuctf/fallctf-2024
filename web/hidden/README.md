@@ -2,7 +2,7 @@
 
 Author: Victor
 
-There's plenty of stuff that are hidden around webpages. Can you find them all?
+There's plenty of things that are hidden around web pages. Can you find them all?
 
 ## Solution
 

@@ -2,7 +2,7 @@
 
 Author: Noah
 
-One day, I bought an FBI surveillance van off eBay—don’t ask. Naturally, I decided to drive over to my friend’s house and have some fun. The van was packed with radio gear, including a bunch of antennas, so I pointed one toward his place and started scanning through frequencies.
+One day, I bought an FBI surveillance van off eBay... don’t ask. Naturally, I decided to drive over to my friend’s house and have some fun. The van was packed with radio gear, including a bunch of antennas, so I pointed one toward his place and started scanning through frequencies.
 
 That’s when I found something weird: a signal that spiked up and down. What really caught my attention was that it seemed to sync perfectly with the flashes from his monitor coming out the window. I stared at the van’s equipment and then back at his house, completely baffled.
 

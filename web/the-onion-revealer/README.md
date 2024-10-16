@@ -6,9 +6,7 @@ I got scammed while buying some completely legal goods on a niche e-commerce web
 The admins refused to help me, so I'd like to unmask them and take down their whole operation in retribution.
 This little service they run seems like a good starting point.
 
-## Hints
-
-- This challenge requires downloading a special web browser.
+Note: This challenge requires downloading a special web browser.
 
 ## Dev Notes
 

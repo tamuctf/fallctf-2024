@@ -2,7 +2,7 @@
 
 Author: Noam
 
-An employee named Kevin Lewis sent a file through the unsecured File Transfer Protocol (FTP) and the network traffic was captured. Can you figure out Kevin Lewis’s gmail password?
+An employee named Kevin Lewis sent a file through the unsecured File Transfer Protocol (FTP), and the network traffic was captured. Can you figure out Kevin Lewis’s gmail password?
 
 Flag format: `gigem{password}`
 

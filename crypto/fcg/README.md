@@ -2,7 +2,7 @@
 
 Author: Alex
 
-Linear Congruential Generators are too weak so mine flips back and forth. Surely that's secure, right?
+Linear Congruential Generators are too weak, so mine flips back and forth. Surely that's secure, right?
 
 Flag format: `gigem{}`
 

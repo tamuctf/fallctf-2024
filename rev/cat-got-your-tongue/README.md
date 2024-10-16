@@ -4,7 +4,7 @@ Author: Alex
 
 Meow meow meow? Meow. Meow meow Meow meow meow meow.
 
-Note: You can use [Turbowarp](https://turbowarp.org/) or the [official Scratch website](https://scratch.mit.edu/) to load the .sb3 file.
+Note: You can use [Turbowarp](https://turbowarp.org/) or the [official Scratch website](https://scratch.mit.edu/) to load the `.sb3` file.
 
 ## Dev Notes
 

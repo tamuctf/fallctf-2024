@@ -2,7 +2,7 @@
 
 Author: Nicholas
 
-I was walking by the graveyard when a strangely dressed man with a mad look in his eye pushed this file into my hands, babbling about some kind of "amulet".
+I was walking by the graveyard when a strangely dressed man, with a mad look in his eye, pushed this file into my hands, babbling about some kind of "amulet".
 
 ## Solution
 

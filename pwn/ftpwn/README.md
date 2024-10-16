@@ -2,7 +2,7 @@
 
 Author: Mukund
 
-I made an implementation of ftp! Even though I didn't finish making it, I decided to host it anyways. What could POSSIBLY go wrong?
+I made an implementation of FTP! Even though I didn't finish making it, I decided to host it anyways. What could POSSIBLY go wrong?
 
 ## Solution
 

@@ -2,7 +2,7 @@
 
 Author: Alex
 
-I downloaded this funny-looking game that was created with Pygame and then packaged with PyInstaller. However, sometimes when I'm playing, it seems to lag! Can you figure out what's going on?
+I downloaded this funny-looking game that was created with pygame, and then packaged with PyInstaller. However, sometimes when I'm playing, it seems to lag! Can you figure out what's going on?
 
 ## Dev Notes
 

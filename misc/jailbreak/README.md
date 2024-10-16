@@ -2,7 +2,7 @@
 
 Author: Bode
 
-I lost my calculator for an upcoming exam, so I made a calculator using the python interpreter. Feel free to use it for your exams too!
+I lost my calculator for an upcoming exam, so I made a calculator using the Python interpreter. Feel free to use it for your exams too!
 
 ## Solution
 
