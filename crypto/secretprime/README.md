@@ -4,7 +4,37 @@ There's no way you can decrypt anything without the secret prime!
 
 ## Dev Notes
 
-N/A
+Server performs
+$$c = mk \pmod p$$.
+
+However, both $k$ and $p$ are unknown.
+
+To recover $p$, consider:
+
+$$\begin{align}
+c &= mk \pmod p \\
+(2c) &= (2m)k \pmod p \\
+\\
+2(mk \mod p) &\equiv (2mk) \pmod p \\
+2(mk \mod p) - ((2mk) \mod p) &= np \text{ where } n \leq 1
+\end{align}$$
+
+We can retry this process until we get lucky and $n=1$, which recovers $p$.
+
+To recover $k$, two methods:
+
+$$c = mk \pmod p$$
+$$cm^{-1} = k \pmod p$$
+
+Or
+
+$$c = (1)k \pmod p$$
+$$c = k \pmod p$$
+
+After recovering both $k$ and $p$, flag can be decrypted:
+
+$$c_{flag} = m_{flag} k \pmod p$$
+$$c_{flag}k^{-1} = m_{flag} \pmod p$$
 
 ## Solution
 
